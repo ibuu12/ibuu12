@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>seminario</title>
+</head>
+<body bgcolor=pink>
+    <h1>Cuestionario sobre Características Emprendedoras</h1>
+	nombres de los integrantes:
+    <form id="cuestionario-form">
+        <input type="text" id="nombre" required>
+        <br><input type="text" id="nombre" required>
+        <br><input type="text" id="nombre" required>
+        <br><input type="text" id="nombre" required>
+        <br><input type="text" id="nombre" required>
+        <br><input type="text" id="nombre" required>
+        <br>
+
+        <!-- Preguntas -->
+        <h2>Preguntas:</h2>
+        <ol>
+            <li>¿Que son las caracteristicas emprendedoras para usted?</li>
+            <textarea id="pregunta1" rows="4" cols="50" required></textarea>
+             <li>¿Qué cualidades crees que son esenciales para un emprendedor?</li>
+            <textarea id="pregunta1" rows="4" cols="50" required></textarea>
+			 <li>¿Qué es mejor un emprendimiento propio o estar en un empleo?</li>
+            <textarea id="pregunta1" rows="4" cols="50" required></textarea>
+			 <li>¿es necesario planificar un negocio antes de llevarlo a cabo?</li>
+            <textarea id="pregunta1" rows="4" cols="50" required></textarea>
+			 <li>¿Debemos tener capacidad de liderazgo en un emprendimiento?</li>
+            <textarea id="pregunta1" rows="4" cols="50" required></textarea>
+			 <li>¿Cualquier persona puede crear un emprendimiento propio? sí o no ¿porque? </li>
+            <textarea id="pregunta1" rows="4" cols="50" required></textarea>
+			 <li>¿Se puede realizar un emprendimiento a partir de una habilidad o talento que tengamos nosotros ?</li>
+            <textarea id="pregunta1" rows="4" cols="50" required></textarea>
+			 <li>¿Es necesario planificar un emprendimiento antes de llevarlo a cabo ?</li>
+            <textarea id="pregunta1" rows="4" cols="50" required></textarea>
+			 <li>¿Es importante tener ayuda exterior para un emprendimiento como organizaciones o parientes extranjeros ?</li>
+            <textarea id="pregunta1" rows="4" cols="50" required></textarea>
+			 <li>¿En qué se diferencia un emprendimiento por oportunidad a 1 por necesidad ?</li>
+            <textarea id="pregunta1" rows="4" cols="50" required></textarea>
+        </ol>
+
+        <!-- Botón para enviar -->
+        <button type="submit">Enviar respuestas</button>
+    </form>
+
+    <script>
+        document.getElementById("cuestionario-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita que la página se recargue al enviar el formulario
+
+            // Obtén las respuestas
+            const nombre = document.getElementById("nombre").value;
+            const respuesta1 = document.getElementById("pregunta1").value;
+            // Repite para las demás preguntas
+
+            // Puedes procesar las respuestas aquí o enviarlas a un servidor
+            console.log("Nombre:", nombre);
+            console.log("Respuesta 1:", respuesta1);
+            // Repite para las demás respuestas
+
+            // Limpia el formulario
+            document.getElementById("cuestionario-form").reset();
+        });
+    </script>
+</body>
+</html>
